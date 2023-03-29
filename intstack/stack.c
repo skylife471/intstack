@@ -40,7 +40,7 @@ int main()
 {
 	srand(time(NULL));
 	int rand_num= rand() % 100 + 1;
-	printf("------Using Array------\n");
+	printf("------Using Array------");
 	for (int i = 0;i <30; i++)
 	{
 		if (rand_num % 2 == 0)
