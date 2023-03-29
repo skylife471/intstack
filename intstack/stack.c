@@ -17,7 +17,7 @@ int is_full()
 }
 void push(element item)
 {
-	if (is_full)
+	if (is_full())
 	{
 		fprintf(stderr, "Stack Full!\n");
 	}
@@ -28,7 +28,7 @@ void push(element item)
 }
 element pop()
 {
-	if (is_empty)
+	if (is_empty())
 	{
 		fprintf(stderr, "Stack Empty\n");
 		return;
@@ -38,9 +38,9 @@ element pop()
 }
 int main()
 {
-	int num;
 	srand(time(NULL));
 	int rand_num= rand() % 100 + 1;
+	printf("------Using Array------\n");
 	for (int i = 0;i <30; i++)
 	{
 		if (rand_num % 2 == 0)
@@ -54,4 +54,5 @@ int main()
 		}
 		rand_num = rand() % 100 + 1;
 	}
+	return 0;
 }
